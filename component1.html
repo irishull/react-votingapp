@@ -26,7 +26,10 @@
 
         React.renderComponent(
             <MessageBox />,
-            
+            document.getElementById('app'),
+            function() {
+                console.log('callback');
+            }
         )
 
         </script>
