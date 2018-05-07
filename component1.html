@@ -19,17 +19,25 @@
         var MessageBox = React.createClass({
             render: function() {
                 return (   
-                        <h1>Hello, World</h1>
+                        <div className="container">
+                            <h1>Hello, World</h1>
+                            <SubMessage />
+                        </div>
+                );
+            }
+        });
+
+        var SubMessage = React.createClass({
+            render: function() {
+                return (
+                    <h2>How's it going?</h2>
                 );
             }
         });
 
         React.renderComponent(
             <MessageBox />,
-            document.getElementById('app'),
-            function() {
-                console.log('callback');
-            }
+            document.getElementById('app')
         )
 
         </script>
